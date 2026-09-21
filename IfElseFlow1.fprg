@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="IfElseFlow1"/>
+        <attribute name="authors" value="rafli"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-21 04:26:45 PM"/>
+        <attribute name="created" value="cmFmbGk7SEFOU1lBSDAxOzIwMjYtMDktMjE7MDM6NTM6MjAgUE07MjQyNg=="/>
+        <attribute name="edited" value="cmFmbGk7SEFOU1lBSDAxOzIwMjYtMDktMjE7MDQ6MjY6NDUgUE07MTsyNTQy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="diskon" type="Integer" array="False" size=""/>
+            <declare name="statusMember" type="String" array="False" size=""/>
+            <output expression="&quot;Masukkan Status Member&quot;" newline="True"/>
+            <input variable="statusMember"/>
+            <if expression="statusMember == &quot;GOLD&quot;">
+                <then>
+                    <assign variable="diskon" expression="20"/>
+                </then>
+                <else>
+                    <if expression="statusMember == &quot;SILVER&quot;">
+                        <then>
+                            <assign variable="diskon" expression="15"/>
+                        </then>
+                        <else>
+                            <if expression="statusMember == &quot;BRONZE&quot;">
+                                <then>
+                                    <assign variable="diskon" expression="10"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Anda mendapatkan Total Diskon Sebanyak= &quot;&amp; diskon&amp; &quot;%&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
